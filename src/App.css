@@ -1,0 +1,23 @@
+.btn {
+    margin: 0;
+    padding: 15px 25px;
+    background-color: #0D6EFD;
+    color: #fff;
+    font-size: medium;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color:rgb(67, 67, 242);
+    cursor: pointer;
+    /* transition: 0.5; */
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px auto;
+    padding: 0 50px;
+}

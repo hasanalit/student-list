@@ -1,7 +1,13 @@
 import React from 'react';
 import './App.css';
+import CreateForm from './Components/CreateForm';
+import Search from './Components/Search';
+import Table from './Components/Table';
+import Header from './Pages/Header';
 
 function App() {
+
+  const [modal, setModal] = React.useState(false)
 
   const [date, setDate] = React.useState()
   const [time, setTime] = React.useState()
@@ -16,20 +22,16 @@ function App() {
   return (
     <>
 
-    <form onSubmit={handleSubmit}>
-      <input
-      type="text"
-      placeholder='username'
-      onChange={(e) => setDate(e.target.value)}
-      />
-      <input
-      type="date"
-      placeholder='birnima'
-      onChange={(e) => setTime(e.target.value)}
-      />
 
-      <button>button</button>
-    </form>
+    <Header setModal={setModal} modal={modal}/>
+
+
+    <CreateForm handleSubmit={handleSubmit} modal={modal} setDate={setDate} setTime={setTime} />
+
+    <main className='main'>
+      <Search />
+      <Table />
+    </main>
 
 
     </>
